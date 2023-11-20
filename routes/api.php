@@ -29,6 +29,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('projects', [ProjectController::class, 'index']);
 
+// vado a richiamare la funzione show implementata nell' api ProjectController
+
 Route::get('projects/{project:id}', [ProjectController::class, 'show']);
 
 

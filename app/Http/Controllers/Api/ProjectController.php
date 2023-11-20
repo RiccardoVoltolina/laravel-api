@@ -18,14 +18,23 @@ class ProjectController extends Controller
     public function show($id)
 {
 
+    // creo una nuova istanza di project, gli passo i modelli type e technologies e prendo l id per vedere il singolo post
 
     $project = Project::with('type', 'technologies')->where('id', $id)->first();
+
+    // se il progetto esiste faccio vedere il progetto
+
     if ($project) {
         return response()->json([
             'success' => true,
             'result' => $project
         ]);
-    } else {
+
+    } 
+    
+    // senò errore 
+    
+    else {
         return response()->json([
             'success' => false,
             'result' => 'Ops! Page not found'
