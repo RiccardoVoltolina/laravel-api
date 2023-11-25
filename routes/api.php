@@ -35,4 +35,7 @@ Route::get('projects', [ProjectController::class, 'index']);
 
 Route::get('projects/{project:id}', [ProjectController::class, 'show']);
 
+Route::post('/contacts', [LeadController::class, 'store']);
+
+
 
