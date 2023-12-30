@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProjectController;
+use App\Models\Lead;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,11 @@ Route::resource('/admin/project', ProjectController::class);
 Route::get('recycle', [ProjectController::class, 'recycle'])->name('project.recycle');
 
 Route::get('projects/restore/{id}', [ProjectController::class, 'restore'])->name('project.restore');
+
+Route::get('/mailable', function () {
+    $lead = Lead::find(2);
+    return new App\Mail\NewLeadMail($lead);
+});
 
 
 require __DIR__.'/auth.php';

@@ -56,6 +56,8 @@ class ProjectController extends Controller
 
         $project = new Project();
 
+       
+
      
 
         if ($request->has('thumb')) {
