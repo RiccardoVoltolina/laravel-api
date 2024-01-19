@@ -73,7 +73,6 @@
             <select multiple class="form-select" name="technologies[]" id="technologies">
                 <option disabled>Select one</option>
 
-                <!-- TODO: Improve validation outputs -->
                 @foreach ($technologies as $technology )
                 <option value="{{$technology->id}}" {{ in_array($technology->id, old('technologies', [])) ? 'selected' : '' }}>{{$technology->name_tech}}</option>
                 @endforeach

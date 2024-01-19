@@ -21,12 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('projects', function(){
-//     return [
-//         'status' => 'succes',
-//         'result' => Project::all(),
-//     ];
-// });
+
 
 // questo è il percorso da scrivere, per visualizzare l'array lato API, il projects deve essere preceduto da /api
 

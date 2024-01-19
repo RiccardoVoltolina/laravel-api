@@ -65,8 +65,9 @@
 
                                 <form action="{{ route('project.show', [$project->id]) }}">
 
-                                    <button type="submit" class="btn btn-primary"><i
-                                            class="fa-solid fa-circle-info"></i></button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                    </button>
 
                                 </form>
 
